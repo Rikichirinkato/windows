@@ -1,0 +1,224 @@
+@font-face {    
+    font-family:"exo2";
+    src:url("../fonts/Exo2-Regular.otf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {    
+    font-family:"exo2light";
+    src:url("../fonts/Exo2-Light.otf") format("truetype");
+    font-style: normal;
+}
+@font-face {    
+    font-family:"exo2bold";
+    src:url("../fonts/Exo2-Bold.otf") format("truetype");
+    font-style: normal;
+}
+*{
+    font-family:"exo2";
+    margin:0;
+}
+a,a:visited{
+    text-decoration:none;
+    padding:5px;
+}
+ul{
+    list-style-type:none;
+    z-index:4;
+}
+.contacts{
+    width:70%;
+    height:49px;
+    padding:0 15% 0 15%;
+    display:block;
+}
+.contacts a{
+    display:none;
+}
+.green-sq{
+    width:7px;
+    height:7px;
+}
+.nav-n-order{
+    width:100%;
+    height:580px;
+    background-image:url(../img/head-bg.png);
+}
+.opacity{
+    width:inherit;
+    height:inherit;
+    background-image:url(../img/main-opacity.png);
+}
+.nav{
+    width:100%;
+    height:53px;
+    background-image:url(../img/another-opacity.png); 
+}
+.nav a{
+    display:none;
+    color:white;
+    position:relative;  
+}
+.nav a:hover{
+    background-color:black;
+}
+.order{
+    width:94%;
+    height:inherit;
+    display:flex;
+    flex-direction:column;
+    padding-left:3%;
+    padding-right:3%%;
+}
+.order-info{
+    height:auto;
+    color:white;
+    text-align:center;
+}
+.order-info-h1{
+    margin-top:20px;
+    font-size:3em;
+    font-family:"exo2bold";
+}
+.order-info-h2{
+    margin-top:20px;
+    font-family:"exo2light";
+}
+.order-info-surprise{
+    margin-top:20px;
+    font-family:"exo2light";
+}
+.order-info-web{
+    font-weight:bold;
+    font-size:1.5em;
+}
+.order-info-counter{
+    margin-right:20px;
+    margin-top:20px;
+    display:none;
+}
+.order-info-counter p{
+    width:75px;
+    text-align:center;
+    font-size:0.7em;
+    margin-top:10px;
+}
+.order-info-counter-numb{
+    width:34px;
+    height:47px;
+    border:1px solid white;
+    font-size:40px;
+    text-align:center;
+    display:inline-block;
+    font-family:"exo2light";
+}
+.nav-btn{
+    width:53px;
+    height:53px;
+    background-color:inherit;
+}
+.nav-btn:focus~a{
+    width:150px;
+    display:block;
+    background-image:inherit;
+}
+.order-btn{
+    width:245px;
+    height:40px;
+    background-color:#ec360a;
+    border:0px;
+    margin-left:35px;
+    margin-top:25px;
+    color:white;
+    font-family:"exo2light";
+    font-size:1.2em
+}
+.order-forma{
+    width:313px;
+    height:399px;
+    background-image:url(../img/forma-pic.png);
+    display:none;
+    color:white;
+    font-family:"exo2light";
+}
+.order-forma h1{
+    width:200px;
+    margin-top:30px;
+    margin-left:45px;
+}
+.order-forma p{
+    width:200px;
+    margin-left:45px;
+    margin-top:20px;
+}
+[name="order-form"]>input{
+    margin-left:35px;
+    margin-top:30px;
+    width:245px;
+    height:30px;
+    border: 1px solid #767676;
+    background:inherit;
+}
+.forma-btn{
+    display:block;
+    margin:auto;
+    margin-top:20px;
+}
+.forma-btn:focus+.order-forma{
+    display: block;
+}
+.forma-btn:focus+.order-info{
+    display:none;
+}
+@media(max-width:767px){
+    
+}
+@media(min-width:768px){
+    .order{
+        width:80%;
+        padding-left:10%;
+        padding-right:10%;  
+    }
+    .order-info-surprise,.order-info-web,.order-info-web+div{
+         margin-left:8.3333%;
+    }
+    .order-info-counter{
+        display:inline-block;   
+    }
+    .contacts a{
+        display:inline-block;
+    }
+}
+@media(min-width:992px){
+    .nav{
+        width:70%;
+        display:inline-flex;
+        justify-content:flex-end;
+        align-items: center;
+        padding:0 15% 0 15%;
+    }
+    .nav a{
+        display:flex;
+    }
+    .nav-btn{
+        display:none;
+    }
+    .order{
+        display:inline-flex;
+        flex-direction:row;
+    }
+    .order-info{
+        text-align:left;
+        margin-top:120px;
+    }
+    .order-forma{
+        display:block;
+        margin-top:70px;
+    }
+    .forma-btn{
+        display:none;
+    }
+}
+@media(min-width:1200px){
+    
+}
