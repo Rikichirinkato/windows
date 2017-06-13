@@ -1,18 +1,16 @@
 @font-face {    
     font-family:"exo2";
     src:url("../fonts/Exo2-Regular.otf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
 }
 @font-face {    
     font-family:"exo2light";
     src:url("../fonts/Exo2-Light.otf") format("truetype");
-    font-style: normal;
+    font-weight:light;
 }
 @font-face {    
     font-family:"exo2bold";
     src:url("../fonts/Exo2-Bold.otf") format("truetype");
-    font-style: normal;
+    font-weight:bold;
 }
 *{
     font-family:"exo2";
@@ -53,22 +51,45 @@ ul{
     width:100%;
     height:53px;
     background-image:url(../img/another-opacity.png); 
+    
 }
-.nav a{
+
+.nav-btn{
+    position:relative;
+    top:10px;
+}
+.nav-link{
     display:none;
     color:white;
-    position:relative;  
+    position:relative; 
+    top:14px;
 }
-.nav a:hover{
+.nav-link:hover{
     background-color:black;
+}
+.sandwich{
+    width:49px;
+    height:5px;
+    border-radius:3px;
+    background-color:white;
+    margin-left:3px;
+    margin-top:8px;
+}
+#glass,#open{
+    display:none;
+}
+#glass:checked~.nav-link{
+    width:150px;
+    display:block;
+    background-image:inherit;
 }
 .order{
     width:94%;
     height:inherit;
     display:flex;
-    flex-direction:column;
+    flex-direction:column-reverse;
     padding-left:3%;
-    padding-right:3%%;
+    padding-right:3%s;
 }
 .order-info{
     height:auto;
@@ -112,26 +133,16 @@ ul{
     display:inline-block;
     font-family:"exo2light";
 }
-.nav-btn{
-    width:53px;
-    height:53px;
-    background-color:inherit;
-}
-.nav-btn:focus~a{
-    width:150px;
-    display:block;
-    background-image:inherit;
-}
 .order-btn{
     width:245px;
     height:40px;
     background-color:#ec360a;
     border:0px;
     margin-left:35px;
-    margin-top:25px;
+    margin-top:20px;
     color:white;
     font-family:"exo2light";
-    font-size:1.2em
+    font-size:1.2em;
 }
 .order-forma{
     width:313px;
@@ -160,18 +171,21 @@ ul{
     background:inherit;
 }
 .forma-btn{
+    width:auto;
+    height:auto;
     display:block;
     margin:auto;
     margin-top:20px;
+    padding:10px 20px;
 }
-.forma-btn:focus+.order-forma{
-    display: block;
+#open:checked~.order-forma{
+    margin:50px auto 0 auto;
+    display:block;
+    background-image:url(../img/forma-pic.png);
 }
-.forma-btn:focus+.order-info{
+#open:checked~.order-info{
     display:none;
-}
-@media(max-width:767px){
-    
+    background-image:inherit;
 }
 @media(min-width:768px){
     .order{
@@ -197,15 +211,16 @@ ul{
         align-items: center;
         padding:0 15% 0 15%;
     }
-    .nav a{
+    .nav-link{
         display:flex;
+        top:0;
     }
     .nav-btn{
         display:none;
     }
     .order{
         display:inline-flex;
-        flex-direction:row;
+        flex-direction:row-reverse;
     }
     .order-info{
         text-align:left;
